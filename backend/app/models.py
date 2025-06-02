@@ -1,8 +1,6 @@
 """
 Асинхронные модели SQLAlchemy 2.0 для Arbitrage-Navigator.
 
-Все таблицы используют явные индексы и внешние ключи.
-"""
 
 from __future__ import annotations
 
