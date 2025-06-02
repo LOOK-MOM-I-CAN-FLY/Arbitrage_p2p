@@ -9,7 +9,6 @@ settings = get_settings()
 
 
 def create_app() -> FastAPI:
-    """Создаёт и настраивает экземпляр FastAPI."""
     app = FastAPI(
         title=settings.app_name,
         default_response_class=UJSONResponse,
