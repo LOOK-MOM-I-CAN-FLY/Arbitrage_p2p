@@ -1,4 +1,4 @@
-"""Точка входа FastAPI-приложения."""
+
 
 from fastapi import FastAPI
 from fastapi.responses import UJSONResponse
