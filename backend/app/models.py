@@ -1,5 +1,3 @@
-"""
-Асинхронные модели SQLAlchemy 2.0 для Arbitrage-Navigator.
 
 
 from __future__ import annotations
