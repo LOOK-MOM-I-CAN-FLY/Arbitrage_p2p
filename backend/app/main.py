@@ -19,7 +19,6 @@ def create_app() -> FastAPI:
     # Роутеры будут добавлены на следующих шагах (auth, routes, simulate…)
     @app.get("/health", tags=["infra"])
     async def health() -> dict[str, str]:
-        """Простой health-чек для оркестратора/мониторинга."""
         return {"status": "ok"}
 
     return app
