@@ -27,7 +27,7 @@ class Base(DeclarativeBase):
     id: Mapped[int] = mapped_column(Integer, primary_key=True, autoincrement=True)
 
 class Exchange(Base):
-    """Биржа: Spot/P2P/Derivatives и т.д."""
+    """Stock market: Spot/P2P/Derivatives и т.д."""
 
     __tablename__ = "exchange"
     __table_args__ = (
@@ -49,7 +49,7 @@ class Exchange(Base):
 
 
 class Asset(Base):
-    """Крипто-актив (BTC, USDT, XRP...)."""
+    """A Crypto Asset (BTC, USDT, XRP...)."""
 
     __tablename__ = "asset"
     __table_args__ = (UniqueConstraint("symbol", name="uq_asset_symbol"),)
@@ -65,7 +65,7 @@ class Asset(Base):
 
 
 class P2PQuote(Base):
-    """Сняток P2P-объявления."""
+    """Removed P2P ads."""
 
     __tablename__ = "p2p_quote"
     __table_args__ = (
@@ -86,7 +86,7 @@ class P2PQuote(Base):
 
 
 class TransferEdge(Base):
-    """Фиксированные параметры перевода актива по сети."""
+    """Fixed parameters for transferring assets over the network."""
 
     __tablename__ = "transfer_edge"
     __table_args__ = (
@@ -104,7 +104,7 @@ class TransferEdge(Base):
 
 
 class Route(Base):
-    """Найденная связка (цикл) с рассчитанной доходностью."""
+    """The found bundle (cycle) with the calculated yield."""
 
     __tablename__ = "route"
     __table_args__ = (
