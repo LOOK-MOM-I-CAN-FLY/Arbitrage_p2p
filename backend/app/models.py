@@ -111,7 +111,7 @@ class Route(Base):
         Index("ix_route_created_at", "created_at"),
     )
 
-    steps_json: Mapped[dict] = mapped_column(JSONB, nullable=False)  # сериализованный список шагов
+    steps_json: Mapped[dict] = mapped_column(JSONB, nullable=False)  
     roi_pct: Mapped[float] = mapped_column(Float, nullable=False)
     created_at: Mapped[datetime] = mapped_column(
         DateTime(timezone=True), nullable=False, default=datetime.utcnow
