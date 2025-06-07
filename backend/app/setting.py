@@ -1,4 +1,4 @@
-"""Глобальные настройки приложения, читаемые из переменных окружения."""
+"""Global application settings, read from environment variables."""
 
 from functools import lru_cache
 from pathlib import Path
@@ -24,5 +24,5 @@ class Settings(BaseSettings):
 
 @lru_cache
 def get_settings() -> Settings:  # pragma: no cover
-    """Кэшируем экземпляр Settings, чтобы не перечитывать файл .env каждый раз."""
+    """We cache the Settings instance so as not to re-read the file .env every time."""
     return Settings()  # type: ignore[call-arg]
