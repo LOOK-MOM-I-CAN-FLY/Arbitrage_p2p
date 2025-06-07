@@ -20,7 +20,7 @@ from sqlalchemy.orm import DeclarativeBase, Mapped, mapped_column, relationship
 
 
 class Base(DeclarativeBase):
-    """Базовый класс, от которого наследуются все модели."""
+    """The base class that all models inherit from."""
 
     __abstract__ = True
 
