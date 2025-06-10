@@ -1,18 +1,18 @@
 .PHONY: dev tests lint fmt
 
-dev:            ## Установить зависимости и запустить dev-сервер
+dev:            
 	poetry install
 	pre-commit install
 	uvicorn backend.app.main:app --reload --host 0.0.0.0 --port 8000
 
-tests:          ## Запуститьpytest (включая асинхронные)
+tests:        
 	pytest -q
 
-lint:           ## Проверка Ruff + mypy
+lint:           
 	ruff check .
 	mypy .
 
-fmt:            ## Автоматическое форматирование Ruff
+fmt:           
 	ruff format .
 
 help:
